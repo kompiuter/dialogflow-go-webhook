@@ -2,11 +2,11 @@
 
 ![Go Version](https://img.shields.io/badge/go-1.9-brightgreen.svg)
 ![Go Version](https://img.shields.io/badge/go-1.10-brightgreen.svg)
-[![Go Report Card](https://goreportcard.com/badge/github.com/leboncoin/dialogflow-go-webhook)](https://goreportcard.com/report/github.com/leboncoin/dialogflow-go-webhook)
-[![Build Status](https://drone.depado.eu/api/badges/leboncoin/dialogflow-go-webhook/status.svg)](https://drone.depado.eu/leboncoin/dialogflow-go-webhook)
-[![codecov](https://codecov.io/gh/leboncoin/dialogflow-go-webhook/branch/master/graph/badge.svg)](https://codecov.io/gh/leboncoin/dialogflow-go-webhook)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/leboncoin/dialogflow-go-webhook/blob/master/LICENSE)
-[![Godoc](https://godoc.org/github.com/leboncoin/dialogflow-go-webhook?status.svg)](https://godoc.org/github.com/leboncoin/dialogflow-go-webhook)
+<!-- [![Go Report Card](https://goreportcard.com/badge/github.com/leboncoin/dialogflow-go-webhook)](https://goreportcard.com/report/github.com/leboncoin/dialogflow-go-webhook) -->
+<!-- [![Build Status](https://drone.depado.eu/api/badges/leboncoin/dialogflow-go-webhook/status.svg)](https://drone.depado.eu/leboncoin/dialogflow-go-webhook) -->
+<!-- [![codecov](https://codecov.io/gh/leboncoin/dialogflow-go-webhook/branch/master/graph/badge.svg)](https://codecov.io/gh/leboncoin/dialogflow-go-webhook) -->
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/kompiuter/dialogflow-go-webhook/blob/master/LICENSE)
+[![Godoc](https://godoc.org/github.com/kompiuter/dialogflow-go-webhook?status.svg)](https://godoc.org/github.com/kompiuter/dialogflow-go-webhook)
 
 
 Simple library to create compatible DialogFlow v2 webhooks using Go.
@@ -55,18 +55,18 @@ something breaks, please file an issue.
 If you're using [dep](https://github.com/golang/dep) which is the recommended
 way to vendor your dependencies in your project, simply run this command :
 
-`dep ensure -add github.com/leboncoin/dialogflow-go-webhook`
+`dep ensure -add github.com/kompiuter/dialogflow-go-webhook`
 
 ## Using go get
 
 If your project isn't using `dep` yet, you can use `go get` to install this
 package :
 
-`go get github.com/leboncoin/dialogflow-go-webhook`
+`go get github.com/kompiuter/dialogflow-go-webhook`
 
 # Usage
 
-Import the package `github.com/leboncoin/dialogflow-go-webhook` and use it with
+Import the package `github.com/kompiuter/dialogflow-go-webhook` and use it with
 the `dialogflow` package name. To make your code cleaner, import it as `df`.
 All the following examples and usages use the `df` notation.
 
@@ -75,7 +75,7 @@ All the following examples and usages use the `df` notation.
 In this section we'll use the [gin](https://github.com/gin-gonic/gin) router as
 it has some nice helper functions that will keep the code concise. For an
 example using the standard `http` router, see 
-[this example](https://github.com/leboncoin/dialogflow-go-webhook/blob/master/examples/http).
+[this example](https://github.com/kompiuter/dialogflow-go-webhook/blob/master/examples/http).
 
 When DialogFlow sends a request to your webhook, you can unmarshal the incoming
 data to a `df.Request`. This, however, will not unmarshal the contexts and the
@@ -88,7 +88,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	df "github.com/leboncoin/dialogflow-go-webhook"
+	df "github.com/kompiuter/dialogflow-go-webhook"
 )
 
 type params struct {
@@ -209,7 +209,8 @@ func webhook(c *gin.Context) {
 
 # Examples
 
-- [Using Gin](https://github.com/leboncoin/dialogflow-go-webhook/blob/master/examples/gin)
-- [Using http](https://github.com/leboncoin/dialogflow-go-webhook/blob/master/examples/http)
+- [Using Gin](https://github.com/kompiuter/dialogflow-go-webhook/blob/master/examples/gin)
+- [Using http](https://github.com/kompiuter/dialogflow-go-webhook/blob/master/examples/http)
+- [Using handler](https://github.com/kompiuter/dialogflow-go-webhook/blob/master/examples/handler)
 
 

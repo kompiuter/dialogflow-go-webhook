@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	df "github.com/leboncoin/dialogflow-go-webhook"
+	df "github.com/kompiuter/dialogflow-go-webhook"
 )
 
 type params struct {

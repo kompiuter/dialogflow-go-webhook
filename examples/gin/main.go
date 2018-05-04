@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	df "github.com/leboncoin/dialogflow-go-webhook"
+	df "github.com/kompiuter/dialogflow-go-webhook"
 )
 
 type params struct {
