@@ -13,7 +13,7 @@ func main() {
 	h.Register("room.get", roomGetHandler)
 	h.Register("room.reserve", roomReserveHandler)
 
-	log.Fatal(http.ListenAndServe(":5000", h))
+	log.Fatal(http.ListenAndServe(":8082", h))
 }
 
 func roomGetHandler(ctx context.Context, dfr *df.Request) (*df.Fulfillment, int) {

@@ -47,7 +47,7 @@ func (h *Handler) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 	ctx := context.WithValue(context.Background(), httpRequestKey, req)
 	dff, status := handler(ctx, dfr)
 
-	rw.Header().Set("Content-Type", "application/json")
+	rw.Header().Set("Content-Type", "application/json; charset=utf-8")
 	rw.WriteHeader(status)
 	if err := json.NewEncoder(rw).Encode(dff); err != nil {
 		rw.WriteHeader(http.StatusInternalServerError)

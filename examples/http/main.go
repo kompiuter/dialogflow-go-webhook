@@ -47,7 +47,7 @@ func webhook(rw http.ResponseWriter, req *http.Request) {
 			{RichMessage: df.Text{Text: []string{"hello"}}},
 		},
 	}
-	rw.Header().Set("Content-Type", "application/json")
+	rw.Header().Set("Content-Type", "application/json; charset=utf-8")
 	rw.WriteHeader(http.StatusOK)
 	json.NewEncoder(rw).Encode(dff)
 }
